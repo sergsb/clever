@@ -1,4 +1,6 @@
 # Clever
+[![DOI](https://zenodo.org/badge/98550290.svg)](https://zenodo.org/badge/latestdoi/98550290)
+
 A software for 3D molecular fields calculations. 
 
 # Requirements 
