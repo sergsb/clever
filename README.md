@@ -22,6 +22,7 @@ Hydrogens                  |  Oxygens
   * [six](https://pypi.python.org/pypi/six)
   * [numpy](http://www.numpy.org/)
   * [progressbar2](https://pypi.python.org/pypi/progressbar2)
+  * [future](https://pypi.python.org/pypi/future)
 * MPI support 
   * [mpi4py](http://pythonhosted.org/mpi4py/)
 * Parallel processing 
@@ -49,20 +50,20 @@ If the calculation succeeds, the files will be renamed from `zzz` prefix to `gzz
 
 We recommend to do all heavy calculations on a cluster with MPI support
 
-`python3 clevermpi.py geometry --database <path to database directory> --number_of_conformers <the maximal number of conformers to generate>`
+`python3 mpiclever.py geometry --database <path to database directory> --number_of_conformers <the maximal number of conformers to generate>`
 
 # Charges calculations
 
 After conformers generation one can calculate charges. 
 
-`python3 clevermpi.py charges --database <path to database directory>`
+`mpirun -n <num of procs> python3 mpiclever.py charges --database <path to database directory>`
 
 If the calculation succeeds, the files will be renamed from `gzz` prefix to `gcz`, otherwise troubled molecules will be marked as `cfailed`.
 
 # 3D-RISM calculations
 Once you have a database with charges calculated, it is possible to calculate 3D-RISM scalar fileds. 
 
-`python3 clevermpi.py rism --database <path to database directory>  --xvvfile <path to amber file with solute susceptibility function>
+`mpirun -n <num of procs> python3 mpiclever.py rism --database <path to database directory>  --xvvfile <path to amber file with solute susceptibility function>
 `
 
 If the calculation succeeds, the files will be renamed from `gcz` prefix to `gcr`, otherwise troubled molecules will be marked as `rfailed`.
