@@ -1,7 +1,16 @@
 # Clever
 [![DOI](https://zenodo.org/badge/98550290.svg)](https://zenodo.org/badge/latestdoi/98550290)
 
-A software for 3D molecular fields calculations. 
+A software for 3D molecular fields calculations. 3D molecular fields are the scalar
+fields that represents some physical functions. 
+
+An example of 3D molecular field is a density distribution functions of 
+hydrogens and oxygens atoms of water molecules surrounding the solute.
+
+Hydrogens                  |  Oxygens
+:-------------------------:|:-------------------------:
+![local density of hydrogens surrounding a molecule](images/H.png)  |  ![local density of hydrogens surrounding a molecule](images/O.png)
+
 
 # Requirements 
 * General requirements
