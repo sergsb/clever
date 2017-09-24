@@ -4,7 +4,7 @@
 A software for 3D molecular fields calculations. 3D molecular fields are the scalar
 fields that represents some physical functions. 
 
-An example of 3D molecular field is a density distribution functions of 
+An example of 3D molecular fields is a density distribution function of 
 hydrogens and oxygens atoms of water molecules surrounding the solute.
 
 Hydrogens                  |  Oxygens
